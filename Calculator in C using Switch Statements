@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int main()
+{	
+  //Data types with Variables
+	double n1, n2;
+	char op, option;
+	
+  //Do While Loops
+	do {
+		printf ("Enter first number: ");
+		scanf ("%lf", &n1);
+		printf ("Enter operator (+, -, *, /): ");
+		scanf (" %c", &op);
+		printf ("Enter second number: ");
+		scanf ("%lf", &n2);
+		
+    //Switch Statement
+		  switch (op)
+		  {
+		  	case '+':
+			  	printf ("The sum of two numbers is %.2lf", n1+n2);
+			  	break;
+			  case '-':
+			  	printf ("The difference of two numbers is %.2lf", n1-n2);
+			  	break;
+			  case '*':
+			  	printf ("The product of two numbers is %.2lf", n1*n2);
+			  	break;
+			  case '/':
+			  	printf ("The quotient of two numbers is %.2lf", n1/n2);
+			  	break;
+		  	default:
+				  printf ("Invalid Operation!");
+		  }
+      
+      //Asking the user if he/she wants to continue or no
+			printf ("\nDo you want to continue ('Y' for Yes, 'N' for no )? :");
+			scanf (" %c", &option);
+		
+	}while(option == 'Y' or option == 'y');
+
+	return 0;
+}
